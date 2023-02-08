@@ -10,7 +10,7 @@ const App = () => {
   let columnWidth = 30;
   if (view === ViewMode.Month) {
     columnWidth = 300;
-  } else if (view === ViewMode.Week) {
+  } else if (view === ViewMode.Day) {
     columnWidth = 250;
   }
   const handleTaskChange = (task) => {
@@ -59,7 +59,7 @@ const App = () => {
   };
   return (
     <div>
-      <div class="split left">
+      <div className="split left">
         <ViewSwitcher
           onViewModeChange={(viewMode) => setView(viewMode)}
           onViewListChange={setIsChecked}
@@ -78,26 +78,9 @@ const App = () => {
           onExpanderClick={handleExpanderClick}
           listCellWidth={isChecked ? "155px" : ""}
           columnWidth={columnWidth}
-          barBackgroundColor="blue"
-          rowHeight={40}
-          fontSize={12}
         />
-        {/* <h3>Gantt With Limited Height</h3>
-      <Gantt
-        tasks={tasks}
-        viewMode={view}
-        onDateChange={handleTaskChange}
-        onDelete={handleTaskDelete}
-        onProgressChange={handleProgressChange}
-        onDoubleClick={handleDblClick}
-        onSelect={handleSelect}
-        onExpanderClick={handleExpanderClick}
-        listCellWidth={isChecked ? "155px" : ""}
-        ganttHeight={300}
-        columnWidth={columnWidth}
-      /> */}
       </div>
-      <div class="split right">
+      <div className="split right">
         <span>hi</span>
       </div>
     </div>

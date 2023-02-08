@@ -6,7 +6,7 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
       name: "Loran",
       id: "ProjectSample",
-      // progress: 25,
+      progress: 25,
       type: "project",
       hideChildren: true
     },
@@ -21,7 +21,7 @@ export function initTasks() {
       ),
       name: "StunBleed - Trip GLOBAL",
       id: "Task 0",
-      // progress: 45,
+      progress: 45,
       type: "task",
       project: "ProjectSample"
     },
@@ -29,10 +29,9 @@ export function initTasks() {
       start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2),
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 4, 0, 0),
       name: "Childjob type",
-      dependencies: ["Task 0"],
       id: "Task 1",
-      // progress: 25,
-      // dependencies: ["Task 0"],
+      progress: 0,
+      //dependencies: ["Task 0"],
       type: "task",
       project: "ProjectSample"
     },
@@ -41,7 +40,7 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 8, 0, 0),
       name: "Repeater Subjob",
       id: "Task 2",
-      // progress: 10,
+      progress: 10,
       // dependencies: ["Task 1"],
       type: "task",
       project: "ProjectSample"
@@ -51,7 +50,7 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 9, 0, 0),
       name: "Repeater Subjob",
       id: "Task 3",
-      // progress: 2,
+      progress: 0,
       // dependencies: ["Task 2"],
       type: "task",
       project: "ProjectSample"
@@ -62,7 +61,7 @@ export function initTasks() {
       name: "Repeater Subjob",
       id: "Task 4",
       type: "task",
-      // progress: 70,
+      progress: 70,
       // dependencies: ["Task 2"],
       project: "ProjectSample"
     },
@@ -71,7 +70,7 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
       name: "Repeater Subjob",
       id: "Task 6",
-      // progress: currentDate.getMonth(),
+      progress: 0,//currentDate.getMonth(),
       type: "task",
       // dependencies: ["Task 4"],
       project: "ProjectSample"
@@ -81,7 +80,7 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 19),
       name: "Repeater Subjob",
       id: "Task 9",
-      // progress: 0,
+      progress: 0,
       // isDisabled: true,
       type: "task",
       project: "ProjectSample"
@@ -91,7 +90,7 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
       name: "CUXHAVEN",
       id: "ProjectSample2",
-      // progress: 25,
+      progress: 25,
       type: "project",
       hideChildren: false
     },
@@ -100,20 +99,10 @@ export function initTasks() {
       end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 19),
       name: "Repeater Subjob",
       id: "Task 10",
-      // progress: 0,
+      progress: 0,
       // isDisabled: true,
       type: "task",
       project: "ProjectSample2"
-    },
-
-    {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
-      name: "CUXHAVEN",
-      id: "ProjectSample2",
-      // progress: 25,
-      type: "project",
-      hideChildren: false
     }
   ];
   return tasks;
