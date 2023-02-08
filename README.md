@@ -1,2 +1,2 @@
-# GanttView
+# grantt-chart
 Created with CodeSandbox
